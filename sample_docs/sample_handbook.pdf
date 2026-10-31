@@ -1,0 +1,121 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 4 0 R 5 0 R 6 0 R] /Count 4 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 7 0 R /Resources << /Font << /F1 11 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 8 0 R /Resources << /Font << /F1 11 0 R >> >> >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 9 0 R /Resources << /Font << /F1 11 0 R >> >> >>
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 10 0 R /Resources << /Font << /F1 11 0 R >> >> >>
+endobj
+7 0 obj
+<< /Length 440 >>
+stream
+BT
+/F1 18 Tf
+50 720 Td
+(Enterprise Security and Compliance Manual - Part 1) Tj
+/F1 12 Tf
+0 -30 Td
+(Section 1: Access Control and Identification) Tj
+0 -20 Td
+(All personnel must wear identification badges at all times within secure facilities.) Tj
+0 -20 Td
+(Access to database clusters requires explicit authorization from security leads.) Tj
+0 -20 Td
+(Multi-factor authentication is enforced across all engineering staging clusters.) Tj
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Length 430 >>
+stream
+BT
+/F1 14 Tf
+50 720 Td
+(Enterprise Security and Compliance Manual - Part 2) Tj
+/F1 12 Tf
+0 -25 Td
+(Section 2: Incident Response Protocol) Tj
+0 -20 Td
+(Security incidents must be reported to soc@enterprisedoc.ai within 15 minutes.) Tj
+0 -20 Td
+(The incident response team initiates triage and isolation procedures immediately.) Tj
+0 -20 Td
+(Post-incident root cause analyses must be submitted within 72 hours of resolution.) Tj
+ET
+
+endstream
+endobj
+9 0 obj
+<< /Length 452 >>
+stream
+BT
+/F1 14 Tf
+50 720 Td
+(Enterprise Security and Compliance Manual - Part 3) Tj
+/F1 12 Tf
+0 -25 Td
+(Section 3: Compliance Standards and Data Retention) Tj
+0 -20 Td
+(The organization undergoes annual SOC 2 Type II and ISO 27001 third-party audits.) Tj
+0 -20 Td
+(Customer activity telemetry and audit trails must be retained for 7 calendar years.) Tj
+0 -20 Td
+(Deletion of production log streams before the retention period is strictly prohibited.) Tj
+ET
+
+endstream
+endobj
+10 0 obj
+<< /Length 456 >>
+stream
+BT
+/F1 14 Tf
+50 720 Td
+(Enterprise Security and Compliance Manual - Part 4) Tj
+/F1 12 Tf
+0 -25 Td
+(Section 4: Disaster Recovery and Business Continuity) Tj
+0 -20 Td
+(Database snapshots are replicated asynchronously across multi-region availability zones.) Tj
+0 -20 Td
+(The Recovery Time Objective RTO is strictly 60 minutes for tier-one applications.) Tj
+0 -20 Td
+(The Recovery Point Objective RPO is guaranteed under 5 minutes of transaction data.) Tj
+ET
+
+endstream
+endobj
+11 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000133 00000 n 
+0000000260 00000 n 
+0000000387 00000 n 
+0000000514 00000 n 
+0000000642 00000 n 
+0000001133 00000 n 
+0000001614 00000 n 
+0000002117 00000 n 
+0000002625 00000 n 
+trailer
+<< /Size 12 /Root 1 0 R >>
+startxref
+2696
+%%EOF

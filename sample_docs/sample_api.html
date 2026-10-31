@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enterprise Documentation Platform REST API Specification</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #333; margin: 40px; }
+        h1 { color: #1e3a8a; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
+        h2 { color: #2563eb; margin-top: 30px; }
+        h3 { color: #475569; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #cbd5e1; padding: 10px 14px; text-align: left; }
+        th { background-color: #f1f5f9; color: #1e293b; }
+        code { background: #f1f5f9; color: #e11d48; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+        pre { background: #1e293b; color: #f8fafc; padding: 14px; border-radius: 6px; overflow-x: auto; }
+        .badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 0.85em; }
+        .badge-post { background: #dcfce7; color: #15803d; }
+        .badge-get { background: #e0f2fe; color: #0369a1; }
+        .badge-delete { background: #fee2e2; color: #b91c1c; }
+    </style>
+</head>
+<body>
+
+    <h1>EnterpriseDoc AI REST API & Services Specification (v2.0)</h1>
+    <p>This document details the public and internal RESTful API interfaces provided by EnterpriseDoc AI. All requests must be transmitted over encrypted TLS 1.3 channels and use JSON request/response encoding.</p>
+
+    <h2>1. Authentication Endpoints</h2>
+    <p>Authentication utilizes salted bcrypt hashing and JSON Web Tokens (JWT) for secure session management across web and mobile clients.</p>
+
+    <h3><span class="badge badge-post">POST</span> /api/v1/auth/login</h3>
+    <p>Authenticates an employee or administrator and returns an access token.</p>
+    <pre>
+POST /api/v1/auth/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "admin123"
+}
+    </pre>
+    <p><strong>Response (HTTP 200 OK):</strong></p>
+    <pre>
+{
+    "status": "success",
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "token_type": "bearer",
+    "user": {
+        "id": 1,
+        "username": "admin",
+        "role": "admin"
+    }
+}
+    </pre>
+
+    <h2>2. Document Management & Ingestion Endpoints</h2>
+    <p>Manage enterprise documentation repository files including PDF manuals, HTML articles, Markdown guides, and raw text policies.</p>
+
+    <h3><span class="badge badge-post">POST</span> /api/v1/documents/upload</h3>
+    <p>Uploads and indexes an enterprise document. Generates SHA-256 fingerprint for deduplication. Rejects duplicate files with HTTP 409 Conflict.</p>
+
+    <h3><span class="badge badge-get">GET</span> /api/v1/documents</h3>
+    <p>Retrieves all indexed documents in the database along with total chunk counts, file sizes, and upload timestamps.</p>
+
+    <h3><span class="badge badge-delete">DELETE</span> /api/v1/documents/{document_id}</h3>
+    <p>Permanently deletes a document from SQLite metadata storage and removes all corresponding vector embeddings from ChromaDB.</p>
+
+    <h2>3. Hybrid RAG Query & Question Answering</h2>
+    <p>The conversational Q&A endpoint combines vector similarity search and BM25 keyword matching to retrieve relevant passages, detect contradictions, and synthesize grounded answers.</p>
+
+    <h3><span class="badge badge-post">POST</span> /api/v1/chat/query</h3>
+    <pre>
+POST /api/v1/chat/query
+Content-Type: application/json
+
+{
+    "question": "What is the policy for carrying forward unused vacation days?",
+    "top_k": 5
+}
+    </pre>
+    <p><strong>Response (HTTP 200 OK):</strong></p>
+    <pre>
+{
+    "question": "What is the policy for carrying forward unused vacation days?",
+    "answer": "Employees may carry forward a maximum of 5 unused vacation days into Q1 of the following year. Carried-forward days must be used by March 31st or they are forfeited [Source 1].",
+    "confidence": "High",
+    "contradiction_detected": false,
+    "sources": [
+        {
+            "id": 1,
+            "document": "sample_policy.txt",
+            "page": 1,
+            "section": "Employee Benefits and Paid Time Off",
+            "excerpt": "Employees may carry forward a maximum of 5 unused vacation days..."
+        }
+    ]
+}
+    </pre>
+
+    <h2>4. Enterprise Billing Policies, Subscription Plans, and Licensing</h2>
+    <p>EnterpriseDoc AI offers tiered subscriptions tailored to organization size and workload concurrency:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Subscription Tier</th>
+                <th>Monthly Price</th>
+                <th>Monthly Query Quota</th>
+                <th>Storage Capacity</th>
+                <th>Support SLA</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Starter</strong></td>
+                <td>$49 / month</td>
+                <td>10,000 queries</td>
+                <td>5 GB document storage</td>
+                <td>Email support (24h turnaround)</td>
+            </tr>
+            <tr>
+                <td><strong>Professional</strong></td>
+                <td>$199 / month</td>
+                <td>100,000 queries</td>
+                <td>50 GB document storage</td>
+                <td>Priority support (4h response)</td>
+            </tr>
+            <tr>
+                <td><strong>Enterprise Ultimate</strong></td>
+                <td>$999 / month</td>
+                <td>Unlimited queries</td>
+                <td>1 TB dedicated vector cluster</td>
+                <td>24/7 dedicated Technical Account Manager (15m SLA)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong>Payment Cycles and Invoicing:</strong> Subscriptions are billed automatically on the 1st of each month. Invoices with Net-30 payment terms are available exclusively for Enterprise Ultimate accounts. Annual commitments receive a 15% discount.</p>
+    <p><strong>Cancellation & Refund Policy:</strong> Subscriptions can be canceled at any time via the admin dashboard. Refunds are pro-rated for unused days within the current billing cycle if requested within 14 days of invoice issuance.</p>
+
+    <h2>5. System Rate Limits & Quotas</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Tier</th>
+                <th>Rate Limit (Requests / Min)</th>
+                <th>Burst Allowance</th>
+                <th>Concurrent Uploads</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Starter</td>
+                <td>60 rpm</td>
+                <td>10 requests</td>
+                <td>2 simultaneous files</td>
+            </tr>
+            <tr>
+                <td>Professional</td>
+                <td>300 rpm</td>
+                <td>50 requests</td>
+                <td>10 simultaneous files</td>
+            </tr>
+            <tr>
+                <td>Enterprise Ultimate</td>
+                <td>3,000 rpm</td>
+                <td>200 requests</td>
+                <td>50 simultaneous files</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+# Acme Corp Enterprise Policy Handbook (Revision v4.2)
+
+## 1. Employee Performance and Appraisal Policy
+
+### Performance Reviews
+Acme Corp conducts regular employee performance reviews twice a year (mid-year check-in in June and annual appraisal in December) to evaluate individual contributions and professional growth. Employees are assessed based on productivity, project delivery, teamwork, technical communication, and achievement of assigned OKRs (Objectives and Key Results).
+
+Performance evaluations are conducted by direct reporting managers. Employees are required to complete self-assessments through the HR portal at least two weeks before their formal review meetings. Managers provide constructive feedback on strengths and identify targeted areas for continuous improvement.
+
+Promotion and compensation revision decisions are directly derived from annual performance ratings (Exceptional, Exceeds Expectations, Meets Expectations, Needs Improvement), business unit financial conditions, and leadership approval. Employees who wish to contest an appraisal rating may request an escalation review with the People Operations Committee within 14 business days.
+
+## 2. Salary, Payroll, and Compensation Policy
+
+### Salary Payments
+Employee salaries are calculated on a monthly cycle and disbursed on the last business day of each calendar month via direct automated bank transfer to verified employee accounts.
+
+Monthly pay slips are published electronically via the Enterprise Payroll Portal within 24 hours of disbursement. Employees must submit updates to banking credentials or tax withholding declarations through the official portal at least 10 business days before the scheduled payroll cut-off date (the 20th of each month).
+
+### Payroll Discrepancies
+Any discrepancy in gross pay, overtime calculation, statutory tax deductions, or medical allowances must be reported to the Finance and Payroll Helpdesk (payroll@acme-enterprise.com) within 15 calendar days of pay slip publication. Confirmed arrears are reconciled in the subsequent payroll cycle.
+
+### Annual Bonuses and Variable Pay
+Annual performance bonuses are distributed in the first payroll cycle following the conclusion of the fiscal year (typically March). Eligibility requires active employment on the payment date and a minimum of six months of continuous tenure during the evaluation period.
+
+## 3. Employee Code of Conduct and Workplace Ethics
+
+### Workplace Behavior
+All Acme Corp team members must uphold the highest standards of integrity, respect, and mutual trust in all interactions with colleagues, clients, vendors, and community members.
+
+Acme Corp enforces a strict zero-tolerance policy against workplace harassment, sexual misconduct, discrimination based on race, gender, religion, age, disability, or sexual orientation, verbal abuse, bullying, and intimidation. Violations are investigated immediately and may result in immediate employment termination.
+
+### Acceptable Use of Corporate Resources
+Company-issued computing hardware, software licensing, high-speed networking, and enterprise communication channels (Slack, Google Workspace) are designated exclusively for authorized business functions. Incidental personal use is permitted provided it does not compromise network performance, violate security policies, or interfere with job duties.
+
+### Conflict of Interest and Confidentiality
+Employees are strictly prohibited from engaging in external commercial engagements, freelance consulting, or advisory roles with direct competitors or suppliers without prior written consent from the Chief Legal Officer. Unauthorized sharing of proprietary algorithms, customer records, source code, or internal pricing documentation constitutes a criminal breach of non-disclosure agreements.
+
+## 4. Employee Benefits, Leave, and Paid Time Off (PTO)
+
+### Paid Time Off (PTO) Entitlement
+Full-time regular employees accrue 20 days of standard paid vacation leave per calendar year, accrued at 1.66 days per completed month of service.
+
+Employees may carry forward a maximum of 5 unused vacation days into the first quarter (Q1) of the subsequent calendar year. Any carried-forward days not utilized by March 31st are automatically forfeited without cash compensation, except where mandated by local labor statutes.
+
+### Leave Approval Workflow
+All planned PTO requests exceeding three consecutive business days must be logged via the enterprise HR portal at least two weeks in advance and approved by the department manager. Unplanned absences due to emergency or sudden illness must be notified to the reporting manager by 9:00 AM local time on the first day of absence.
+
+### Sick and Compassionate Leave
+Employees receive 10 paid sick leave days per year for personal medical recovery. Medical absences exceeding three consecutive days require an official doctor's certificate. Acme Corp also provides up to 5 consecutive paid days of compassionate leave for the loss of an immediate family member.
+
+### Parental and Family Leave
+Primary caregivers are eligible for 16 weeks of fully paid parental leave following the birth, adoption, or foster placement of a child. Secondary caregivers receive 6 weeks of fully paid leave. Parental leave must be taken within the first 12 months following the qualifying event.
+
+## 5. Remote Work, Core Hours, and Flexible Scheduling
+
+### Hybrid Working Framework
+Acme Corp operates on a structured hybrid workplace model. Employees assigned to hybrid roles are required to spend at least two designated collaborative days per week in their local corporate office, with the remaining days eligible for remote work.
+
+### Core Working Hours
+To facilitate synchronous cross-functional collaboration, all employees must be online, active on Slack, and reachable for meetings during core working hours between 10:00 AM and 4:00 PM EST (or equivalent local timezone for regional hubs). Flexible scheduling outside core hours must be pre-approved by department leads.
+
+### Home Office Equipment Allowance
+Eligible remote-eligible employees receive a one-time non-taxable stipend of $750 for ergonomic desk equipment and home office setup upon onboarding, plus a recurring monthly internet reimbursement subsidy of $60.
+
+## 6. Information Security, Device Management, and Data Protection
+
+### Laptop and Device Security
+Every company laptop must be enrolled in the enterprise Mobile Device Management (MDM) fleet. Hardware full-disk encryption (BitLocker / FileVault) must remain enabled at all times. Tampering with or disabling endpoint detection and response (EDR) software is grounds for immediate credential revocation.
+
+### Password and Multi-Factor Authentication (MFA)
+- Passwords must be at least 14 characters long and contain uppercase letters, lowercase letters, numbers, and symbols.
+- Passwords must be updated every 90 days and cannot match the previous 5 passwords.
+- Multi-factor authentication (MFA) via hardware security key (FIDO2/YubiKey) or approved authenticator app (TOTP) is mandatory for all SSO accounts. SMS-based MFA is strictly prohibited due to SIM-swapping vulnerabilities.
+- Account lockout automatically occurs after 5 consecutive failed login attempts; locked accounts require identity verification via the IT Helpdesk to unlock.
+
+### Data Classification and Storage
+All company documents are classified under four tiers: Public, Internal, Confidential, and Restricted.
+- Storing confidential customer data, PII, financial records, or credentials on personal USB drives, unsanctioned cloud drives (Dropbox, personal Google Drive), or personal devices is strictly prohibited.
+- Sensitive databases and customer data must be encrypted both at rest (AES-256) and in transit (TLS 1.3).
+
+## 7. Customer Data Privacy and Regulatory Compliance
+
+### Customer Information Protection
+Customer data may only be accessed by authorized personnel with verified operational need ("principle of least privilege"). Employees handling customer data must undergo mandatory annual GDPR, CCPA, and SOC 2 Type II compliance training.
+
+### Breach Notification
+Any suspected compromise, unauthorized exposure, or accidental leakage of customer personal data must be escalated to the Data Protection Officer (dpo@acme-enterprise.com) within 60 minutes of detection. Acme Corp complies with statutory 72-hour regulatory breach disclosure mandates.
+
+## 8. IT Support, Equipment, and Technical Troubleshooting
+
+### Submitting IT Helpdesk Requests
+Technical problems, software license requests, and hardware issues must be submitted via the Enterprise IT Service Portal at https://helpdesk.acme.internal.
+- Tickets are categorized by severity:
+  - Severity 1 (Critical Outage): Immediate response (< 15 mins), 24/7 coverage.
+  - Severity 2 (Major Impairment): Response within 2 hours.
+  - Severity 3 (Standard Issue / General Inquiry): Response within 1 business day.
+- Employees must include operating system details, error codes, and full reproduction steps in ticket descriptions.
+
+### Hardware Refresh Cycle
+Standard laptop hardware is refreshed every 36 calendar months. Defective machines requiring hardware repair will be swapped with a pre-configured loaner device within 24 hours.
+
+## 9. Office Attendance, Physical Access, and Facilities
+
+### Badge Access and Visitor Management
+Employees must prominently display corporate photo ID badges at all times while on company premises. Loaning badges or tailgating through secure badge-access doors is strictly prohibited. External visitors must register at the reception desk, sign an NDA, and remain accompanied by an employee escort.
+
+### Workspace Hygiene and Conference Rooms
+Conference rooms must be booked in advance via Google Calendar. Bookings unattended after 10 minutes are released for open use. Workspaces follow a clean-desk policy: confidential documents and removable storage media must be locked in personal desk drawers at the end of each workday.
+
+## 10. Employee Resignation, Knowledge Transfer, and Exit Formalities
+
+### Notice Period
+Regular employees must provide a minimum notice period of 30 calendar days upon submitting formal resignation via the HR portal. Executive and managerial roles require 60 calendar days notice unless mutually waived by department leadership.
+
+### Knowledge Transfer and Asset Handover
+Departing employees must execute a documented knowledge transfer plan with assigned teammates. All company-owned equipment—including laptops, monitors, access badges, credit cards, and security keys—must be returned to IT Operations on or before the final working day. All enterprise account logins and cryptographic access keys are systematically revoked at 5:00 PM on the employee's last day.
+
+### Final Settlement
+Final settlement calculations (pro-rated salary, accrued unused PTO balance, expense reimbursements, and statutory deductions) are disbursed within 14 business days following the last working day and satisfactory asset reconciliation.
+
+## 11. Workplace Health, Emergency Safety, and Incident Reporting
+
+### Emergency Procedures
+In the event of a fire, earthquake, or facility emergency, all occupants must evacuate via emergency stairwells and gather at the designated outdoor assembly point. Never use elevators during an evacuation.
+
+### Accident Reporting
+Any physical accident, injury, hazard, or near-miss occurring on company premises must be reported to the Health & Safety Officer (safety@acme-enterprise.com) within 24 hours. First-aid kits and automated external defibrillators (AEDs) are situated adjacent to the primary elevators on every floor.
+
+## 12. Corporate Travel and Expense Reimbursement Policy
+
+### Travel Authorizations
+Business travel must be approved by the Department Vice President at least 21 days in advance for domestic travel and 30 days for international travel. Flights must be booked through the corporate travel booking portal in economy class for flights under 6 hours duration.
+
+### Per Diem and Expense Thresholds
+- Daily meal allowance (per diem): Up to $75/day for domestic travel, $110/day for international tier-1 cities.
+- Itemized tax receipts are mandatory for any individual business expense exceeding $25.
+- Expense reports must be submitted in the Concur expense system within 30 days of trip completion. Late expense submissions (> 60 days) are non-reimbursable.
+- Alcohol, personal entertainment, mini-bar expenses, and traffic citations are non-reimbursable company expenses.
